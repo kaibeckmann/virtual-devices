@@ -120,7 +120,7 @@ class VirtualDriver extends Homey.Driver {
         try {
           this.log('args: ' + simpleStringify(args) );
           let device = validateItem('device', args.device);
-          let sensor = validateItem('sensor', args.sensor);
+          let sensor = validateItem('sensor', args.sensor).trim();
           let value  = validateItem('value',  args.value );
 
           this.log(device.getName() + ' -> Sensor: ' + sensor);
